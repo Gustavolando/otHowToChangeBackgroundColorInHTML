@@ -2,7 +2,7 @@
 
 This is a pretty simple exercise of DOM manipulation.
 
-I practiced here shadowsCSS variables, CSS active classes and CSS manipulation through JS using getComputedStyle.
+I practiced here CSS variables, CSS active class and CSS manipulation through JS using getComputedStyle.
 
 A simple and useful HTML, CSS and JS code.
 
