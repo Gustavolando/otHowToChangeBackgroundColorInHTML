@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Change Background Color in Html</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="colors">
+    <span class="active" style="--clr:#1dd1a1" onclick="changeColor()"></span>
+    <span style="--clr:#ff6b6b" onclick="changeColor()""></span>
+    <span style="--clr:#2e86de" onclick="changeColor()""></span>
+    <span style="--clr:#f368e0" onclick="changeColor()""></span>
+    <span style="--clr:#ff9f43" onclick="changeColor()""></span>
+  </div>
+  <script>
+    function changeColor(color) {
+      if (!color) {
+        document.body.style.background = getComputedStyle(event.target).backgroundColor
+      } else {
+        document.body.style.background = color
+      }
+      
+      // Mark as active color
+      document.querySelectorAll('span').forEach(function(item) {
+        item.classList.remove('active')
+      })
+      event.target.classList.add('active')
+    }
+  </script>
+</body>
+</html>
